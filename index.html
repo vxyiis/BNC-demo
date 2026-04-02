@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Banana Clicker</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<!-- NOTIFICATION -->
+<div id="notifContainer"></div>
+
+<!-- LOADING SCREEN -->
+<div id="loadingScreen">
+  <div class="loadingContent">
+    <h1 class="loadingTitle">Banana Clicker</h1>
+    <div class="loadingSub">Developed by @vxyiis</div>
+    <div id="loadingBarContainer">
+      <div id="loadingBar"></div>
+    </div>
+    <button id="playButton">Play</button>
+  </div>
+</div>
+
+<!-- GAME -->
+<div id="game" class="hidden">
+
+  <div id="leftPanel">
+    <div id="statsBox">
+      <div id="bananaCount">0 bananas</div>
+      <div id="bps">per second: 0</div>
+    </div>
+    <img src="images/bananaclicker.png" id="banana" />
+  </div>
+
+  <div id="middlePanel"></div>
+
+  <div id="rightPanel">
+    <div id="shopTitle">Store</div>
+
+    <div class="shopItem" onclick="buyAuto()">
+      <img src="images/button.png" />
+      <div>
+        <div class="shopName">Whip Cream</div>
+        <div class="shopDesc">Produces bananas automatically</div>
+        <div class="shopCost">Cost: <span id="autoCost">50</span></div>
+      </div>
+    </div>
+
+    <div class="shopItem" onclick="buyClickUpgrade()">
+      <img src="images/strawberries.png" />
+      <div>
+        <div class="shopName">Strawberries</div>
+        <div class="shopDesc">Increase bananas per click</div>
+        <div class="shopCost">Cost: <span id="clickCost">30</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="work.js"></script>
+</body>
+</html>
